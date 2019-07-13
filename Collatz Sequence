@@ -1,0 +1,20 @@
+def collatz(number):
+    
+    
+      
+        if number % 2 == 1:
+            
+            result= 3*number+1
+            print(result)
+            return result
+        if number % 2==0:
+            return(number)
+        
+    
+
+print('enter a number')
+try:
+    number = int(input())
+    collatz(int(number))
+except ValueError:
+    print('int's only')
