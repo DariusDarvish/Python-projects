@@ -1,0 +1,11 @@
+spam =['apples','tofu','cats']
+
+def stringmaker(list):
+    for x in list:
+        if x== list[-1]:
+            print("and "+list[-1]+".")
+        else:
+            print(x+", ")
+        
+
+stringmaker(spam)
