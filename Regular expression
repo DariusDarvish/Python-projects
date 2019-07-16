@@ -1,0 +1,7 @@
+import re
+###searches for phone number through regular expressions.
+message ='call me 732-977-2358'
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo=phoneNumRegex.search(message)
+print(mo.group())
