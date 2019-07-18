@@ -1,0 +1,7 @@
+spam = 0
+while spam <5:
+    spam =spam +1
+    if spam ==3:
+        #the continue makes us go back to the top of the loops so we will not out spame is 3
+        continue
+    print('spam is' + ' ' + str(spam))
