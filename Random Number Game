@@ -1,0 +1,20 @@
+import random
+
+secert=random.randint(1,20)
+
+for guess in range (1,7):
+    print('guess number')
+    #input automatically makes it a string type so clarfiy you want it to be an int
+    number=int(input())
+    if number > secert:
+        print('too big')
+    elif number < secert:
+        print('too small')
+    else:
+        break
+
+if number == secert:
+    print('win')
+
+if number != secert:
+    print('lose')
