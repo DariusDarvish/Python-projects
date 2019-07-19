@@ -1,0 +1,36 @@
+def reverse(grid):
+
+        for i in range(len(grid)):
+                       print(grid[i][0],end =' ')
+        for i in range(len(grid)):
+                       print(grid[i][1],end= ' ')
+        for i in range(len(grid)):
+                       print(grid[i][2], end= ' ')
+        for i in range(len(grid)):
+                       print(grid[i][3],end = ' ')
+        for i in range(len(grid)):
+                       print(grid[i][4],end = ' ')
+        for i in range(len(grid)):
+                       print(grid[i][5],end = ' ')
+
+
+
+
+
+
+
+
+
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+
+reverse(grid)
