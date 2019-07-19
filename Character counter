@@ -1,0 +1,8 @@
+message = 'It was a hot day to fish flounder'
+count={}
+#to avoid counting letters sepratley use .lower
+for i in message.lower():
+        count.setdefault(i,0)
+        count[i]= count[i]+1
+
+print(count)
