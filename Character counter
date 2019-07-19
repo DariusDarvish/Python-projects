@@ -1,8 +1,11 @@
+import pprint
+
 message = 'It was a hot day to fish flounder'
 count={}
 #to avoid counting letters sepratley use .lower
 for i in message.lower():
+#it is important to set default then increment 
         count.setdefault(i,0)
         count[i]= count[i]+1
 
-print(count)
+pprint.pprint(count)
