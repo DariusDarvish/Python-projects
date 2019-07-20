@@ -1,7 +1,11 @@
-import re
-###searches for phone number through regular expressions.
-message ='call me 732-977-2358'
+message = 'In an emrgency call 911 or 732-899-0000'
+#use re.compile to work with raw strings
+PhoneNumRegex0 = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+PhoneNumRegex1 = re.compile(r'\d\d\d')
+#uses the pattern I created to search in message for a pattern
+mo0= PhoneNumRegex0.search(message)
+mo1= PhoneNumRegex1.search(message)
+#Gets my info
+print (mo0.group())
+print (mo1.group())
 
-phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-mo=phoneNumRegex.search(message)
-print(mo.group())
