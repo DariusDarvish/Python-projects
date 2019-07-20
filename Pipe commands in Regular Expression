@@ -1,0 +1,6 @@
+Import re
+
+#Finds words that start with Bat and can have any words after
+batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+mobat = batRegex.search('Batmobile lost a wheel time to take the batcopter')
+print(mobat.group())
