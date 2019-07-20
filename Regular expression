@@ -1,11 +1,20 @@
+import re
+
 message = 'In an emrgency call 911 or 732-899-0000'
+message2 = '(732)-867-9900'
 #use re.compile to work with raw strings
-PhoneNumRegex0 = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+#PhoneNumRegex2 allows us to find a string with () in it
+PhoneNumRegex0 = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 PhoneNumRegex1 = re.compile(r'\d\d\d')
+PhoneNumRegex2 = re.compile(r'\(\d\d\d\)-\d\d\d-\d\d\d\d')
 #uses the pattern I created to search in message for a pattern
 mo0= PhoneNumRegex0.search(message)
 mo1= PhoneNumRegex1.search(message)
+mo2= PhoneNumRegex2.search(message2)
 #Gets my info
 print (mo0.group())
 print (mo1.group())
+print (mo0.group(1))
+print (mo0.group(2))
+print (mo2.group())
 
