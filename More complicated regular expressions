@@ -1,0 +1,5 @@
+phoneRegex = re.compile(r'((\d\d\d-)?-\d\d\d-\d\d\d\d(,)?){3}')
+>>> phoneRegex.search('My number is 732-999-0000,894-9999,000-943-9999')
+>>> phoneRegex = re.compile(r'((\d\d\d-)?\d\d\d-\d\d\d\d(,)?){3}')
+>>> phoneRegex.search('My number is 732-999-0000,894-9999,000-943-9999')
+<re.Match object; span=(13, 47), match='732-999-0000,894-9999,000-943-9999'>
