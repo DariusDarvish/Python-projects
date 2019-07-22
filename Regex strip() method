@@ -1,0 +1,17 @@
+#! python 3
+import re
+#Take space in text and print it out with no space
+
+#Two Regex functions one in the beggning one in the end
+
+#Only problem with this code is if there is only one space for example
+#' Cory in the House '
+def splice(String):
+    nameRegex= re.compile(r'\s\s+')
+    nameRegex.findall(String)
+    MO=nameRegex.sub(r'',String)
+    print(MO)
+
+
+String= input()
+splice(String)
