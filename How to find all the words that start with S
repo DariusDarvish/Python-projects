@@ -1,0 +1,8 @@
+mystring='Only bad guys should go to jail'
+#Use for, .split(), and if to create a Statement that will print out words that start with 's':
+#split= a list of strings
+split()
+for letter in st:
+    
+    if letter[0] == 's':
+         print(letter)
