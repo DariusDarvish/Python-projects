@@ -1,0 +1,4 @@
+st = 'Create a list of the first letters of every word in this string'
+st=st.split()
+letters=[x[0]for x in st]
+print(letters)
