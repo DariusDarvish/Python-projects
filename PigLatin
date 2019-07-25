@@ -1,0 +1,5 @@
+def finddog(st):
+    if 'dog'in st.lower():
+        return True
+    else:
+        return False
