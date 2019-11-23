@@ -1,0 +1,188 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+#Question 1
+g= lambda x:(int(x-0.5)+1)
+g(6.6)
+
+
+# In[2]:
+
+
+#Question 2
+def swap_int(a,b):
+    a,b=b,a
+    print(a)
+    print(b)
+swap_int(20,40)
+
+
+# In[94]:
+
+
+#Question 3
+def name_check():
+    n=input('What is your name: ').upper()
+    x='DARIUS DARVISH'
+    y='JOHN CLEESE'
+    z='MICHAEL PALIN'
+    
+    if n==x:
+        print('That\'s Nice name')
+    elif n==y or z:
+        print('That\'s an Okay name')
+    
+    else:
+        print('You have a nice name')
+        
+name_check()
+
+
+# In[ ]:
+
+
+#Question 4
+lis=[4.95,9.95,14.95,19.95,24.95]
+for x in lis:
+    print('Original price: ' +str(round((x/.6),2))+' Sale price: '+str(x))
+
+
+# In[9]:
+
+
+#Question 5
+def powers(a,b):
+    z = 1
+#we will loop b making a^b
+    for x in range(b):
+    
+        z *=a
+    
+    print(str(a)+' '+str(b)+' '+str(z))
+
+powers(1,2)
+powers(2,3)
+powers(3,4)
+powers(4,5)
+powers(5,6)
+
+
+# In[ ]:
+
+
+#question 6
+def lottery():
+    a= int(input('Pick a number 1-9: '))
+    b= int(input('Pick a number 1-9: '))
+    c= int(input('pick a number 1-9: '))
+
+    #I would use rando.randint but for test purposes i used the values below
+    aa= 1 
+    bb= 3 
+    cc= 2 
+    if a==c or a==b or b==c:
+        print('\n cannot repeat numbers')
+    if a==aa and b==bb and c==cc:
+        print('\n You win $10,000')
+    elif (a==aa or a==bb  or a==cc)  and (b==aa or b==bb or b==cc) and (c==aa or c==bb or c==cc):
+        print('\n You win $3,000')
+
+    elif (a==aa or a==bb or a==cc) or (b==aa or b==bb or b==cc) or (c==aa or c==bb or c==cc):  
+        print('\n You win $1,000')
+    else:
+        print('\n You lose')
+
+lottery()
+
+
+# In[ ]:
+
+
+#Question 7
+def occurence_of_max():
+    
+    biggest=0
+    count=0
+    end=0
+    start=True
+    
+    while start:
+        n=int(input('Place a number inside: '))
+    
+        if n > biggest:
+            biggest=n
+            counter=0
+        if n == biggest:
+            counter+=1
+        if n == end:
+            start=False
+    print('The biggest number is: '+str(biggest))
+    print('Counter: '+str(counter))
+
+occurence_of_max()
+
+
+# In[85]:
+
+
+#Question 8
+def pyramid():
+    num=int(input('Input number of rows: '))
+   
+    for i in range(0,num):
+        #create rows
+        for j in range(0,num-i-1):
+        #create white space
+            print(end=" ")
+        for j in range(0,i+1):
+            #creates the *
+            print('*',end= " ")
+        print()
+pyramid()
+
+
+# In[99]:
+
+
+num=7
+
+for i in range(num,0,-1):
+    #tricky but num =7 and i=7,6,5,4,3,2,1
+    for j in range(0,num-i):
+        print(end=' ')
+    #i is going down so we will print less stars
+    for j in range(0,i):
+        print(j,end=' ')    
+    print()
+for i in range(0,num):
+        for j in range(0,num-i-1):
+            print(end=" ")#creates rows
+        for j in range(0,i+1):
+            print(j,end= " ")
+        print()
+
+
+# In[100]:
+
+
+#Question 10 
+
+def phone_number():
+  #dictionary{}
+    phone_dict={'a':'2','b':'2','c':'2',                'd':'3','e':'3','f':'3',                'g':'4','h':'4','i':'4',                'j':'5','k':'5','l':'5',                'm':'6','n':'6','o':'6',                'p':'7','q':'7','r':'7','s':'7',                'u':'8','w':'9','v':'8',                'w':'9','x':'9','y':'9','z':'9',                '1':'1','2':'2','3':'3','4':'4','5':'5',                '6':'6','7':'7','8':'8','9':'9','-':'-','0':'0'}
+    s=[]
+    phone=input('place phone number: ').lower()
+    #takes the value of the key in phones and appends it to s
+    for i in phone:
+        s.append(phone_dict[i])
+    #makes s into a string    
+    print("".join(s))
+    
+    
+phone_number()
+
+
+# In[ ]:
