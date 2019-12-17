@@ -1,0 +1,3 @@
+#how to find the a's in a string
+def count(s,n):
+  return((n*s)[:n:].count('a'))
